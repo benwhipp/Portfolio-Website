@@ -1,4 +1,6 @@
 const photo = document.getElementById('benPhoto');
+const darkModeToggle = document.getElementById('dark-mode-toggle');
+let isDarkMode = false;
 
 const addDarkMode = () => {
     document.querySelector('h1').style.color = '#fff';
@@ -6,6 +8,8 @@ const addDarkMode = () => {
     document.querySelector('p').style.color = '#fff';
     document.querySelector('.aboutUSPs').style.color = '#fff';
     document.getElementById('circle').style.clipPath = 'circle(100%)';
+    document.getElementById('circle').style.opacity = 1;
+    isDarkMode = true;
 };
 
 const revertDarkMode = () => {
@@ -14,7 +18,16 @@ const revertDarkMode = () => {
     document.querySelector('p').style.color = '#352D39';
     document.querySelector('.aboutUSPs').style.color = '#352D39';
     document.getElementById('circle').style.clipPath = 'circle(5% at 0% 0%)';
+    document.getElementById('circle').style.opacity = 0;
+    isDarkMode = false;
 };
 
-photo.onmousedown = addDarkMode;
-photo.onmouseup = revertDarkMode;
+const changeMode = () => {
+    if (!isDarkMode) {
+        addDarkMode();
+    } else {
+        revertDarkMode();
+    }
+};
+
+darkModeToggle.addEventListener('click', changeMode);
