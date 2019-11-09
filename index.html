@@ -9,20 +9,23 @@
     <nav>
         <label class="switch">
             <input type="checkbox">
-            <span class="slider round" id="dark-mode-toggle"></span>
+            <span class="slider" id="dark-mode-toggle"></span>
         </label>
-        <button class="menu" onclick="document.querySelector('.about').scrollIntoView({behavior: 'smooth', block: 'center'});">
+        <button class="menu"
+            onclick="document.querySelector('.about').scrollIntoView({behavior: 'smooth', block: 'center'});">
             About
         </button>
-        <button class="menu" onclick="document.getElementById('projects').scrollIntoView({behavior: 'smooth', block: 'center'});">
+        <button class="menu"
+            onclick="document.getElementById('projects').scrollIntoView({behavior: 'smooth', block: 'center'});">
             Projects
         </button>
-        <button class="Contact" onclick="document.getElementById('hire-me').scrollIntoView({behavior: 'smooth', block: 'center'});">
+        <button class="Contact"
+            onclick="document.getElementById('hire-me').scrollIntoView({behavior: 'smooth', block: 'center'});">
             Hire Me
         </button>
     </nav>
     <div id="circle">
-        
+
     </div>
     <div class="about">
         <section class="portrait">
@@ -34,44 +37,39 @@
                 About
             </h2>
             <p>
-                I'm a freelance web developer/designer with expertise in the following areas:
+                I'm a freelance web developer/designer. If you need:
             </p>
+            <section id="aboutUSPs">
+                <div>
+                    <h2>
+                        01
+                    </h2>
+                    <h3>
+                        A New Website
+                    </h3>
+                </div>
+                <div>
+                    <h2>
+                        02
+                    </h2>
+                    <h3>
+                        Improvments to Your Current Website
+                    </h3>
+                </div>
+                <div>
+                    <h2>
+                        03
+                    </h2>
+                    <h3>
+                        UX/UI Design/Consultancy
+                    </h3>
+                </div>
+            </section>
+            <p>then I'm your guy.</p>
+            <p>(I also have 4 years experience in digital marketing. So if SEO, PPC, or email design/development is on
+                the cards, let's talk.)</p>
         </div>
-        <section class="aboutUSPs">
-            <div>
-                <h2>
-                    01
-                </h2>
-                <h3>
-                    UX Design
-                </h3>
-                <p>
-                    I take a holistic, big-picture approach to UX, leaning on my years of digital marketing experience to bring the important details of your user journeys to the forefront and fully optimise every step.
-                </p>
-            </div>
-            <div>
-                <h2>
-                    02
-                </h2>
-                <h3>
-                    Front End Development
-                </h3>
-                <p>
-                    Whether you're looking to re-style the front of your webshop, or add in additional functionality with a brand new design, if you need it, I can build it.
-                </p>
-            </div>
-            <div>
-                <h2>
-                    03
-                </h2>
-                <h3>
-                    Email Development
-                </h3>
-                <p>
-                    I have over 4 years of experience in writing HTML email templates. From custom designs to Mailchimp templates, I'll ensure your mailing list receives a pixel-perfect newsletter whatever device they view it on. Even Outlook.
-                </p>
-            </div>
-        </section>
+
     </div>
     <section id="projects">
         <div class="profile">
@@ -170,9 +168,12 @@
         <div id="hire-form">
             <div>
                 <form>
-                    <input type="text" id="name" name="user_name" maxlength="50" placeholder="Your name" size="50" required><br>
-                    <input type="email" id="email" name="user_email" maxlength="50" placeholder="Your email address" size="50" required><br>
-                    <textarea id="user-project" name="user_project" placeholder="Tell me about your project" cols="50" minlength="1" rows="10" required></textarea>
+                    <input type="text" id="name" name="user_name" maxlength="50" placeholder="Your name" size="50"
+                        required><br>
+                    <input type="email" id="email" name="user_email" maxlength="50" placeholder="Your email address"
+                        size="50" required><br>
+                    <textarea id="user-project" name="user_project" placeholder="Tell me about your project" cols="50"
+                        minlength="1" rows="10" required></textarea>
 
                 </form>
             </div>
@@ -188,7 +189,8 @@
             This website is still WiP - if you spot any bugs, please let me know!
         </p>
         <div id="social-links">
-            <a href="https://www.linkedin.com/in/benjamin-whipp" target="_blank"><img src="./assets/linkedin.png">Linked-In</a>
+            <a href="https://www.linkedin.com/in/benjamin-whipp" target="_blank"><img
+                    src="./assets/linkedin.png">Linked-In</a>
             <a href="https://github.com/benwhipp" target="_blank"><img src="./assets/github.png">GitHub</a>
             <a href="https://twitter.com/en_codes" target="_blank"><img src="./assets/twitter.png">Twitter</a>
             <a href="https://codepen.io/glitchresonant/" target="_blank"><img src="./assets/codepen.png">Codepen</a>
@@ -291,5 +293,4 @@
         y = logo.offsetTop - 120;
         explode(x, y);
     });
-
 </script>

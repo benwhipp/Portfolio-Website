@@ -2,7 +2,7 @@ body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
     color: #352D39;
-    width: 100%; 
+    width: 100%;
 }
 
 body p {
@@ -30,7 +30,7 @@ body p {
 
 h1 {
     margin: auto auto 0 0;
-    font-size: 60px;
+    font-size: 4rem;
     font-family: 'Libre Baskerville', serif;
     transition: all .3s ease-in-out;
 }
@@ -53,8 +53,9 @@ nav {
     padding: 1% 15%;
     position: sticky;
     top: 0;
-    background: #ffffff;
+    background: #fff;
     z-index: 999;
+    transition: all .5s ease-in-out;
 }
 
 nav button {
@@ -82,19 +83,18 @@ nav button.contact:hover {
 }
 
 .portrait {
-    display: grid;
-    grid-template-columns: 250px auto;
-    grid-template-rows: auto;
-    padding: 2% 0;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .portrait img {
     max-width: 200px;
     border-radius: 100px;
+    margin: 0 50px 0 0;
 }
 
 .about,
-#projects {
+#projects, #hire-me {
     padding: 2% 15%;
 }
 
@@ -107,28 +107,29 @@ nav button.contact:hover {
     font-family: 'Libre Baskerville', serif;
 }
 
-.aboutUSPs {
+#aboutUSPs {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 2fr 1fr;
     grid-template-rows: auto;
     transition: all .3s ease-in-out;
+    padding: 1% 0;
 }
 
-.aboutUSPs div {
-    padding: 0 10% 0 0;
+#aboutUSPs h2 {
+    font-size: 2.2rem;
 }
 
-.aboutUSPs,
+#aboutUSPs h2,
 #hire-me h2 {
     color: #352D39;
 }
 
-.aboutUSPs h3 {
+#aboutUSPs h3 {
     font-size: 22px;
     margin: 0;
 }
 
-.aboutUSPs h3:after,
+#aboutUSPs h3:after,
 .portrait h1:after {
     content: '';
     height: 3px;
@@ -140,6 +141,7 @@ nav button.contact:hover {
 
 #projects {
     background: #f8f8f8;
+    transition: all .5s ease-in-out;
 }
 
 .project-cards {
@@ -232,17 +234,13 @@ nav button.contact:hover {
 #hire-me {
     background: #F9AC52;
     text-align: center;
-    padding: 4% 0;
     margin: 0 0 -1.35%;
 }
 
 #hire-form {
-    display: grid;
-    grid-template-columns: 25% 25%;
-    grid-template-rows: 2;
-    grid-gap: 5%;
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-
 }
 
 #hire-me h2 {
@@ -255,10 +253,10 @@ nav button.contact:hover {
     color: #fff;
     font-weight: 600;
     font-size: 24px;
-    padding: 7% 25%;
+    padding: 25px 75px;
     border: 3px solid #fff;
     border-radius: 20px;
-    margin: 20% 0;
+    margin: 10% 0 20% 75px;
     cursor: pointer;
 }
 
@@ -345,7 +343,8 @@ nav button.contact:hover {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(53, 45, 57, 1);
+    border-radius: 34px;
+    background: #352D39;
     -webkit-transition: .4s;
     transition: transform .4s, box-shadow .1s;
     box-shadow: 1px 1px 5px -2px rgba(53,45,57,0.3);
@@ -358,13 +357,10 @@ nav button.contact:hover {
     width: 26px;
     left: 4px;
     bottom: 4px;
+    border-radius: 50%;
     background-color: #F9AC52;
     -webkit-transition: .4s;
     transition: .4s;
-  }
-  
-  input:checked + .slider {
-    
   }
   
   input:hover + .slider {
@@ -375,28 +371,14 @@ nav button.contact:hover {
     -webkit-transform: translateX(26px);
     -ms-transform: translateX(26px);
     transform: translateX(26px);
-    box-shadow: inset -7px 0px 0px 1px #F9AC52;
-    background-color: rgba(53, 45, 57, 1);
-    
-  }
-  
-  /* Rounded sliders */
-  .slider.round {
-    border-radius: 34px;
-  }
-  
-  .slider.round:before {
-    border-radius: 50%;
+    box-shadow: inset -7px -5px 0px 1px #F9AC52;
+    background-color: #6E6362;
   }
   
 
 
 
-@media screen and (max-width: 720px) {
-
-    h1 {
-        font-size: 30px;
-    }
+@media screen and (max-width: 960px) {
 
     nav {
         padding: 1%;
@@ -406,13 +388,13 @@ nav button.contact:hover {
         font-size: 14px
     }
 
-    .aboutUSPs,
-    .project-cards {
-        grid-template-columns: auto;
+    .portrait img {
+        margin: 50px 0;
     }
 
-    #projects {
-        padding: 15% 1%;
+    #aboutUSPs,
+    .project-cards {
+        grid-template-columns: auto;
     }
     
     .project-cards {
@@ -431,5 +413,13 @@ nav button.contact:hover {
         max-width: 100%;
     }
 
+    #hire-me form {
+        width: 75%;
+    }
+
+
+    #hire-me button {
+        margin: 10% 0 20%;
+    }
 
 }
