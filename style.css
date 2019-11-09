@@ -21,13 +21,6 @@ body p {
     z-index: -100;
 }
 
-/*
-#circle:hover {
-    clip-path: circle(100%);
-    z-index: -100;
-}
-*/
-
 h1 {
     margin: auto auto 0 0;
     font-size: 4rem;
@@ -58,6 +51,11 @@ nav {
     transition: all .5s ease-in-out;
 }
 
+#nav-buttons {
+    display: flex;
+    align-items: center;
+}
+
 nav button {
     border: none;
     background: none;
@@ -65,8 +63,16 @@ nav button {
     font-size: 20px;
     font-family: inherit;
     color: inherit;
-    padding: 2% 7%;
+    padding: 25px 75px;
     cursor: pointer;
+}
+
+#hamburger-icon {
+    width: 30px;
+    order: 1;
+    display: none;
+    fill: #352D39;
+    transition: all .4s ease-in-out;
 }
 
 nav button.contact {
@@ -82,6 +88,59 @@ nav button.contact:hover {
     transition: .15s ease-in-out;
 }
 
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    margin: 0 3.5%;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 34px;
+    background: #352D39;
+    -webkit-transition: .4s;
+    transition: transform .4s, box-shadow .1s;
+    box-shadow: 1px 1px 5px -2px rgba(53, 45, 57, 0.3);
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    border-radius: 50%;
+    background-color: #F9AC52;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:hover+.slider {
+    box-shadow: 3px 3px 5px -2px rgba(53, 45, 57, 0.5);
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+    box-shadow: inset -7px -5px 0px 1px #FEF0E9;
+    background-color: #6E6362;
+}
+
 .portrait {
     display: flex;
     flex-wrap: wrap;
@@ -94,7 +153,8 @@ nav button.contact:hover {
 }
 
 .about,
-#projects, #hire-me {
+#projects,
+#hire-me {
     padding: 2% 15%;
 }
 
@@ -234,7 +294,7 @@ nav button.contact:hover {
 #hire-me {
     background: #F9AC52;
     text-align: center;
-    margin: 0 0 -1.35%;
+    margin: 0;
 }
 
 #hire-form {
@@ -272,9 +332,19 @@ nav button.contact:hover {
     border: none;
     font-family: inherit;
     margin: 10px 0;
-    padding: 1% 1%;
+    padding: 0;
 }
 
+#hire-input-fields {
+    width: 40%;
+}
+
+#name,
+#email,
+#user-project,
+form {
+    width: 100%;
+}
 
 .footer {
     background-color: #352D39;
@@ -285,13 +355,16 @@ nav button.contact:hover {
 
 .footer p {
     color: #fff;
-    padding: 0 15% 0;
+    padding: 0 15%;
 }
 
 .footer a {
     color: #fff;
-    padding: 0 15% 7%;
     text-decoration: none;
+    width: 150px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 .footer a:hover,
@@ -299,9 +372,7 @@ nav button.contact:hover {
     text-decoration: underline;
 }
 
-.footer a:first-of-type {
-    padding: 0 15% 7% 0;
-}
+.footer a:first-of-type {}
 
 .footer img {
     max-width: 20px;
@@ -314,89 +385,79 @@ nav button.contact:hover {
 
 #social-links {
     padding: 0 15%;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    justify-content: left;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
-/* The switch - the box around the slider */
-.switch {
-    position: relative;
-    display: inline-block;
-    width: 60px;
-    height: 34px;
-    margin: 0 3.5%;
-  }
-  
-  /* Hide default HTML checkbox */
-  .switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-  }
-  
-  /* The slider */
-  .slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border-radius: 34px;
-    background: #352D39;
-    -webkit-transition: .4s;
-    transition: transform .4s, box-shadow .1s;
-    box-shadow: 1px 1px 5px -2px rgba(53,45,57,0.3);
-  }
-  
-  .slider:before {
-    position: absolute;
-    content: "";
-    height: 26px;
-    width: 26px;
-    left: 4px;
-    bottom: 4px;
-    border-radius: 50%;
-    background-color: #F9AC52;
-    -webkit-transition: .4s;
-    transition: .4s;
-  }
-  
-  input:hover + .slider {
-      box-shadow: 3px 3px 5px -2px rgba(53,45,57,0.5);
-  }
-  
-  input:checked + .slider:before {
-    -webkit-transform: translateX(26px);
-    -ms-transform: translateX(26px);
-    transform: translateX(26px);
-    box-shadow: inset -7px -5px 0px 1px #F9AC52;
-    background-color: #6E6362;
-  }
-  
+.social-media-svg {
+    fill: #fff;
+    height: 30px;
+    margin: 0 10px;
+}
 
 
-
-@media screen and (max-width: 960px) {
+@media (max-width: 1200px) {
 
     nav {
-        padding: 1%;
+        padding: 5% 3%;
+        flex-direction: column;
+    }
+
+    #mobile-nav-elements {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 100%;
+        align-items: center;
+    }
+
+    .navigation-button {
+        width: 90%;
+        border-bottom: 2px solid #fff; 
+    }
+
+    .switch {
+        margin: 0;
+    }
+
+    #nav-buttons {
+        flex-direction: column;
+        width: 100%;
+        margin: 10px 0 0;
+        display: none;
+    }
+
+    #nav-buttons button {
+    }
+
+    #hamburger-icon {
+        display: block;
+    }
+
+    nav button.contact {
+        padding: 15px 30px;
+        margin: 0;
+        font-size: 20px;
     }
 
     nav button {
-        font-size: 14px
+        font-size: 14px;
+    }
+
+    .portrait {
+        justify-content: center;
     }
 
     .portrait img {
-        margin: 50px 0;
+        margin: 0 0 50px;
     }
 
     #aboutUSPs,
     .project-cards {
         grid-template-columns: auto;
     }
-    
+
     .project-cards {
         display: grid;
         grid-template-columns: 50% 50%;
@@ -413,13 +474,40 @@ nav button.contact:hover {
         max-width: 100%;
     }
 
-    #hire-me form {
-        width: 75%;
+    .about, #projects, #hire-me {
+        padding: 10%;
     }
 
-
     #hire-me button {
-        margin: 10% 0 20%;
+        margin: 5% 0;
+    }
+
+    #hire-form {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #hire-input-fields {
+        width: 100%;
+    }
+
+    .footer p,
+    #social-links {
+        padding: 0 10%;
+    }
+
+    .footer a {
+        flex-direction: column;
+        align-items: center;
+        align-content: start;
+        text-align: center;
+        align-self: start;
+    }
+
+    .social-media-svg {
+        height: 40px;
+        flex: auto;
+        margin: 10px 0;
     }
 
 }
