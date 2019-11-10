@@ -54,6 +54,8 @@ nav {
 #nav-buttons {
     display: flex;
     align-items: center;
+    justify-content: flex-end;
+    width: 100%;
 }
 
 nav button {
@@ -65,6 +67,19 @@ nav button {
     color: inherit;
     padding: 25px 75px;
     cursor: pointer;
+}
+
+#desktop-nav-elements {
+    display: flex;
+    flex-direction: row;
+}
+
+#mobile-nav-elements {
+    display: none;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    margin: 10px 0 0;
 }
 
 #hamburger-icon {
@@ -350,7 +365,7 @@ form {
     background-color: #352D39;
     width: 100%;
     margin: 0;
-    padding: 5% 0;
+    padding: 3% 0 1%;
 }
 
 .footer p {
@@ -384,6 +399,7 @@ form {
 }
 
 #social-links {
+    margin: 2% 0 0;
     padding: 0 15%;
     display: flex;
     flex-direction: row;
@@ -396,6 +412,10 @@ form {
     margin: 0 10px;
 }
 
+#copyright-notice {
+    font-size: 1rem;
+}
+
 
 @media (max-width: 1200px) {
 
@@ -404,7 +424,11 @@ form {
         flex-direction: column;
     }
 
-    #mobile-nav-elements {
+    #desktop-nav-elements {
+        display: none;
+    }
+
+    #nav-buttons {
         display: flex;
         flex-direction: row;
         justify-content: space-around;
@@ -419,16 +443,6 @@ form {
 
     .switch {
         margin: 0;
-    }
-
-    #nav-buttons {
-        flex-direction: column;
-        width: 100%;
-        margin: 10px 0 0;
-        display: none;
-    }
-
-    #nav-buttons button {
     }
 
     #hamburger-icon {
