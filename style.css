@@ -225,6 +225,16 @@ input:checked+.slider:before {
     justify-content: space-between;
 }
 
+.company-name {
+    display: flex;
+    align-items: center;
+}
+
+.company-name h3 {
+    font-size: 1.1rem;
+    margin: 0;
+}
+
 .r-card,
 .g-card,
 .y-card {
@@ -253,10 +263,11 @@ input:checked+.slider:before {
 .card-text-page,
 .card-text-app {
     color: #ffffff;
-    text-align: center;
     position: absolute;
+    bottom: 7px;
     border-radius: 20px;
     width: 90%;
+    padding: 20px 5%;
     opacity: 0;
     transition: opacity .15s ease-in-out;
     -moz-transition: opacity .15s ease-in-out;
@@ -273,37 +284,37 @@ input:checked+.slider:before {
 }
 
 .card-text-email {
-    height: 46.5%;
-    padding: 30% 5%;
     background-color: rgb(240, 100, 73, 0.9);
 }
 
 .card-text-app {
-    height: 46.5%;
-    padding: 42% 5%;
     background-color: rgb(249, 172, 82, 0.9);
 }
 
 .card-text-page {
-    height: 43%;
-    padding: 22.5% 5%;
     background-color: rgb(142, 214, 198, 0.9);
 }
 
-.card-text-email:hover,
-.card-text-page:hover,
-.card-text-app:hover,
-.card-text-email:active,
-.card-text-page:active,
-.card-text-app:active {
+.r-card:hover .card-text-email,
+.g-card:hover .card-text-page,
+.y-card:hover .card-text-app,
+.r-card:active .card-text-email,
+.g-card:active .card-text-page,
+.y-card:active .card-text-app {
+    opacity: 1;
+}
+
+.r-card:hover .card-text-email {
     opacity: 1;
 }
 
 .card-text-email img,
 .card-text-page img,
 .card-text-app img {
-    width: 20%;
+    width: 40px;
+    height: 40px;
     border-radius: 100px;
+    margin: 0 10px 0 0;
 }
 
 #hire-me {
@@ -467,25 +478,8 @@ form {
         margin: 0 0 50px;
     }
 
-    #aboutUSPs,
-    .project-cards {
+    #aboutUSPs {
         grid-template-columns: auto;
-    }
-
-    .project-cards {
-        display: grid;
-        grid-template-columns: 50% 50%;
-        justify-content: center;
-    }
-
-    .r-card,
-    .y-card {
-        max-width: 50%;
-        margin: auto;
-    }
-
-    .g-card {
-        max-width: 100%;
     }
 
     .about, #projects, #hire-me {
@@ -522,6 +516,25 @@ form {
         height: 40px;
         flex: auto;
         margin: 10px 0;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .project-cards {
+        grid-template-columns: auto;
+    }
+
+    .project-cards {
+        display: grid;
+        grid-template-columns: 100%;
+        justify-content: center;
+    }
+
+    .r-card,
+    .y-card, .g-card {
+        max-width: 100%;
     }
 
 }
