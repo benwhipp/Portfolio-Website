@@ -3,6 +3,13 @@ body {
     font-family: 'Poppins', sans-serif;
     color: #352D39;
     width: 100%;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 body p {
@@ -154,6 +161,14 @@ input:checked+.slider:before {
     transform: translateX(26px);
     box-shadow: inset -7px -5px 0px 1px #FEF0E9;
     background-color: #6E6362;
+}
+
+button,
+.switch,
+#hamburger-icon,
+input,
+textarea {
+    outline: 0;
 }
 
 .portrait {
@@ -349,16 +364,17 @@ input:checked+.slider:before {
 #hire-me button:active,
 #hire-me button:hover {
     background: #fff;
-    color: inherit;
+    color: #F9AC52;
     transition: 0.15s ease-in-out;
 }
 
 #hire-me form input,
-#hireme form textarea {
+#hire-me form textarea {
     border: none;
     font-family: inherit;
     margin: 10px 0;
     padding: 0;
+    resize: none;
 }
 
 #hire-input-fields {
@@ -449,7 +465,7 @@ form {
 
     .navigation-button {
         width: 90%;
-        border-bottom: 2px solid #fff; 
+        border-bottom: 2px solid #fff;
     }
 
     .switch {
@@ -482,7 +498,9 @@ form {
         grid-template-columns: auto;
     }
 
-    .about, #projects, #hire-me {
+    .about,
+    #projects,
+    #hire-me {
         padding: 10%;
     }
 
@@ -533,7 +551,8 @@ form {
     }
 
     .r-card,
-    .y-card, .g-card {
+    .y-card,
+    .g-card {
         max-width: 100%;
     }
 
