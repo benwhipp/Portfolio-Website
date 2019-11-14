@@ -10,6 +10,7 @@ body {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    letter-spacing: -0.5px;
 }
 
 body p {
@@ -116,6 +117,7 @@ nav button.contact:hover {
     width: 60px;
     height: 34px;
     margin: 0 3.5%;
+    border-radius: 34px;
 }
 
 .switch input {
@@ -342,6 +344,7 @@ textarea {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
 }
 
 #hire-me h2 {
@@ -392,12 +395,13 @@ form {
     background-color: #352D39;
     width: 100%;
     margin: 0;
-    padding: 3% 0 1%;
+    padding: 3rem 0 1rem;
 }
 
 .footer p {
     color: #fff;
     padding: 0 15%;
+    margin: 1rem 0 3rem;
 }
 
 .footer a {
@@ -436,11 +440,12 @@ form {
 .social-media-svg {
     fill: #fff;
     height: 30px;
-    margin: 0 10px;
+    margin: 0 10px 0 0;
 }
 
 #copyright-notice {
     font-size: 1rem;
+    margin: 1rem 0;
 }
 
 
