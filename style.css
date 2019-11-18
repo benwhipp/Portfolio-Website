@@ -10,7 +10,6 @@ body {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    letter-spacing: -0.5px;
 }
 
 body p {
@@ -36,7 +35,8 @@ h1 {
     transition: all .3s ease-in-out;
 }
 
-body h2 {
+body h2,
+#aboutUSPs h3 {
     font-family: 'Libre Baskerville', serif;
     font-size: 45px;
     margin: 3% 0 1%;
@@ -176,6 +176,8 @@ textarea {
 .portrait {
     display: flex;
     flex-wrap: wrap;
+    align-items: flex-end;
+    margin-bottom: 5%;
 }
 
 .portrait img {
@@ -194,34 +196,47 @@ textarea {
     padding: 2% 0;
 }
 
-.profile p,
-.projects p {
+.portrait p {
     font-family: 'Libre Baskerville', serif;
+}
+
+.portrait p {
+    margin: 20px 0 0;
+}
+
+#services {
+    padding: 2% 15%;
+    background: #f8f8f8;
 }
 
 #aboutUSPs {
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto;
     transition: all .3s ease-in-out;
     padding: 1% 0;
+    margin-bottom: 5%;
 }
 
-#aboutUSPs h2 {
+#aboutUSPs div {
+    margin-bottom: 40px;
+}
+
+#aboutUSPs h3 {
     font-size: 2.2rem;
 }
 
-#aboutUSPs h2,
+#aboutUSPs h3,
 #hire-me h2 {
     color: #352D39;
 }
 
-#aboutUSPs h3 {
+#aboutUSPs h4 {
     font-size: 22px;
     margin: 0;
 }
 
-#aboutUSPs h3:after,
+#aboutUSPs h4:after,
 .portrait h1:after {
     content: '';
     height: 3px;
@@ -232,7 +247,7 @@ textarea {
 }
 
 #projects {
-    background: #f8f8f8;
+    background: #fff;
     transition: all .5s ease-in-out;
 }
 
@@ -340,7 +355,7 @@ textarea {
     margin: 0;
 }
 
-#hire-form {
+#hire-me form {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -359,7 +374,7 @@ textarea {
     font-size: 24px;
     padding: 25px 75px;
     border: 3px solid #fff;
-    border-radius: 20px;
+    border-radius: 10px;
     margin: 10% 0 20% 75px;
     cursor: pointer;
 }
@@ -375,13 +390,19 @@ textarea {
 #hire-me form textarea {
     border: none;
     font-family: inherit;
-    margin: 10px 0;
+    margin: 0;
     padding: 0;
     resize: none;
 }
 
 #hire-input-fields {
     width: 40%;
+}
+
+.form-text {
+    padding: 10px;
+    margin: 10px 0;
+    background: #fff;
 }
 
 #name,
@@ -392,7 +413,7 @@ form {
 }
 
 .footer {
-    background-color: #352D39;
+    background: #352D39;
     width: 100%;
     margin: 0;
     padding: 3rem 0 1rem;
@@ -503,9 +524,14 @@ form {
         grid-template-columns: auto;
     }
 
+    #aboutUSPs div {
+        margin-bottom: 30px;
+    }
+
     .about,
     #projects,
-    #hire-me {
+    #hire-me,
+    #services {
         padding: 10%;
     }
 

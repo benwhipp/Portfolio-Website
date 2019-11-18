@@ -33,6 +33,10 @@
                     About
                 </button>
                 <button class="navigation-button"
+                    onclick="document.getElementById('services').scrollIntoView({behavior: 'smooth', block: 'center'});">
+                    Services
+                </button>
+                <button class="navigation-button"
                     onclick="document.getElementById('projects').scrollIntoView({behavior: 'smooth', block: 'center'});">
                     Projects
                 </button>
@@ -54,6 +58,10 @@
                 About
             </button>
             <button class="navigation-button"
+                onclick="document.getElementById('services').scrollIntoView({behavior: 'smooth', block: 'center'});">
+                Services
+            </button>
+            <button class="navigation-button"
                 onclick="document.getElementById('projects').scrollIntoView({behavior: 'smooth', block: 'center'});">
                 Projects
             </button>
@@ -65,44 +73,73 @@
     <div class="about">
         <section class="portrait">
             <img src="./assets/ben.jpg" id="benPhoto">
-            <h1>Hi, I'm Ben.</h1>
+            <div>
+                <h1>Hi, I'm Ben.</h1>
+                <p>I'm a freelance web developer and designer.</p>
+            </div>
         </section>
+    </div>
+
+    <section id="services">
         <div class="profile">
             <h2>
-                About
+                Services
             </h2>
             <p>
-                I'm a freelance web developer/designer. If you need any of these, then I'm your guy:
+                I offer the following services for small business clients:
             </p>
-            <section id="aboutUSPs">
-                <div>
-                    <h2>
-                        01
-                    </h2>
-                    <h3>
-                        A New Website
-                    </h3>
-                </div>
-                <div>
-                    <h2>
-                        02
-                    </h2>
-                    <h3>
-                        Improvements to Your Current Website
-                    </h3>
-                </div>
-                <div>
-                    <h2>
-                        03
-                    </h2>
-                    <h3>
-                        UX/UI Design/Consultancy
-                    </h3>
-                </div>
-            </section>
         </div>
-
-    </div>
+        <div id="aboutUSPs">
+            <div>
+                <h3>
+                    01
+                </h3>
+                <h4>
+                    Web Development
+                </h4>
+            </div>
+            <div>
+                <h3>
+                    02
+                </h3>
+                <h4>
+                    UX Design
+                </h4>
+            </div>
+            <div>
+                <h3>
+                    03
+                </h3>
+                <h4>
+                    Wordpress Optimisation
+                </h4>
+            </div>
+            <div>
+                <h3>
+                    04
+                </h3>
+                <h4>
+                    Email Development
+                </h4>
+            </div>
+            <div>
+                <h3>
+                    05
+                </h3>
+                <h4>
+                    PPC
+                </h4>
+            </div>
+            <div>
+                <h3>
+                    06
+                </h3>
+                <h4>
+                    SEO
+                </h4>
+            </div>
+        </div>
+    </section>
     <section id="projects">
         <div class="profile">
             <h2>
@@ -126,7 +163,7 @@
                     </p>
                     <a href="#" target="_blank">View case study&nbsp;&nbsp;&#8250;</a>
                 </div>
-                <img class="project-image" src="./assets/new-email2.png">
+                <img class="project-image" src="./assets/email-thin-new.jpg">
             </div>
             <div class="g-card">
                 <div class="card-text-page">
@@ -140,7 +177,7 @@
                         Website design for a social meetup app.
                     </p>
                 </div>
-                <img class="project-image" src="./assets/venner-site.png">
+                <img class="project-image" src="./assets/website-thin-venner.png">
             </div>
             <div class="r-card">
                 <div class="card-text-email">
@@ -154,7 +191,7 @@
                         HTML email templates for use by this holiday lettings company.
                     </p>
                 </div>
-                <img class="project-image" src="./assets/yay-email2.png">
+                <img class="project-image" src="./assets/email-thin-yay.jpg">
             </div>
             <div class="y-card">
                 <div class="card-text-app">
@@ -168,7 +205,7 @@
                         UI/UX design for a social meetup app.
                     </p>
                 </div>
-                <img class="project-image" src="./assets/venner-app2.png">
+                <img class="project-image" src="./assets/app-thin-venner.jpg">
             </div>
             <div class="r-card">
                 <div class="card-text-email">
@@ -182,24 +219,25 @@
                         HTML email templates for use by this holiday lettings company.
                     </p>
                 </div>
-                <img class="project-image" src="./assets/lanterns-email2.png">
+                <img class="project-image" src="./assets/email-thin-lanterns.png">
             </div>
             <div class="g-card">
                 <div class="card-text-page">
                     <div class="company-name">
-                        <img src="./assets/mulberry-logo-white.png">
+                        <img src="./assets/smda-logo.png">
                         <h3>
-                            Venner
+                            SMDA Group
                         </h3>
                     </div>
                     <p>
-                        Website design for a social meetup app.
+                        Landing page designs for a lead generation company.
                     </p>
                 </div>
-                <img class="project-image" src="./assets/venner-site.png">
+                <img class="project-image" src="./assets/website-thin-smda-landing-pages.png">
             </div>
         </div>
     </section>
+
     <section id="hire-me">
         <div>
             <h2>
@@ -209,24 +247,28 @@
                 Get in touch and let's make it happen.
             </p>
         </div>
-        <div id="hire-form">
+        <form name="Hire Form" method="POST" data-netlify="true">
             <div id="hire-input-fields">
-                <form>
-                    <input type="text" id="name" name="user_name" maxlength="50" placeholder="Your name" required><br>
+                <div class="form-text">
+                    <input type="text" id="name" name="user_name" maxlength="50" placeholder="Your name" required>
+                </div>
+                <div class="form-text">
                     <input type="email" id="email" name="user_email" maxlength="50" placeholder="Your email address"
-                        required><br>
+                        required>
+                </div>
+                <div class="form-text">
                     <textarea id="user-project" name="user_project" placeholder="Tell me about your project"
                         minlength="1" rows="10" required></textarea>
-
-                </form>
+                </div>
             </div>
             <div>
-                <button class="confetti">
+                <button class="confetti" type="submit">
                     Hire Me
                 </button>
             </div>
-        </div>
+        </form>
     </section>
+
     <section class="footer">
         <p>
             This website is still WiP - if you spot any bugs, please let me know!
