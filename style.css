@@ -3,13 +3,13 @@ body {
     font-family: 'Poppins', sans-serif;
     color: #352D39;
     width: 100%;
-    -webkit-tap-highlight-color: transparent;
+    /*-webkit-tap-highlight-color: transparent;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
-    user-select: none;
+    user-select: none;*/
 }
 
 body p {
