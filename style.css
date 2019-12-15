@@ -51,7 +51,7 @@ nav {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    padding: 1% 15%;
+    padding: 1% 0;
     position: sticky;
     top: 0;
     background: #fff;
@@ -62,7 +62,7 @@ nav {
 #nav-buttons {
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: center;
     width: 100%;
 }
 
