@@ -14,6 +14,9 @@ const addDarkMode = () => {
     document.querySelector('body').style.color = '#fff';
     document.getElementById('projects').style.background = '#352D39';
     document.getElementById('services').style.background = '#6E6362';
+    document.getElementById('hire-me').style.background = 'rgb(110, 99, 98)';
+    document.getElementById('hire-me').querySelector('h2').style.color = '#F9AC52';
+    document.getElementById('hire-me').querySelector('button').style.border = '3px solid #F9AC52';
     darkModeToggle.style.background = '#6E6362';
     document.getElementById('hamburger-icon').style.fill = '#fff';
     const changeAboutH3s = () => {
@@ -37,6 +40,9 @@ const revertDarkMode = () => {
     document.querySelector('body').style.color = '#352D39';
     document.getElementById('projects').style.background = '#fff';
     document.getElementById('services').style.background = '#f8f8f8';
+    document.getElementById('hire-me').style.background = '#F9AC52';
+    document.getElementById('hire-me').querySelector('h2').style.color = '#352D39';
+    document.getElementById('hire-me').querySelector('button').style.border = '3px solid #fff';
     darkModeToggle.style.background = '#352D39';
     document.getElementById('hamburger-icon').style.fill = '#352D39';
     const changeAboutH3s = () => {
