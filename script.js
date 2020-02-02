@@ -85,3 +85,17 @@ if (localStorage.getItem('Dark Mode') === 'true') {
     addDarkMode();
     document.querySelector('input').checked = true;
 }
+
+const navButtons = {
+    About: 'about',
+    Services: 'services',
+    Projects: 'projects',
+    'Hire Me': 'hire-me'
+}
+
+const navButtonsInteraction = (button) => {
+    let id = navButtons.button;
+    let buttonName = button.innerHTML;
+    let clickEvent = document.getElementById('id').scrollIntoView({behavior: 'smooth', block: 'center'});
+    button.addEventListener('click', clickEvent);
+}

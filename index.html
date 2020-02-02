@@ -25,6 +25,7 @@
     <meta name="description" content="Ben Whipp is a freelance web developer and designer, specialising in bespoke websites, UX design, and Wordpress optimisation for small businesses.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="./style.css">
+    <script src="https://kit.fontawesome.com/671bc8dbfe.js" defer></script>
     <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville:700|Poppins:400,600" rel="stylesheet">
     <link rel="shortcut icon" type="image/png" href="./assets/favicon.png">
     <script type="text/javascript" src="./script.js" defer></script>
@@ -42,7 +43,7 @@
             </label>
             <div id="desktop-nav-elements">
                 <button class="navigation-button"
-                    onclick="document.querySelector('.about').scrollIntoView({behavior: 'smooth', block: 'center'});">
+                    onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth', block: 'center'});">
                     About
                 </button>
                 <button class="navigation-button"
@@ -80,76 +81,53 @@
             </button>
         </div>
     </nav>
-    <div id="circle">
 
+    <div id="circle">
     </div>
-    <div class="about">
-        <section class="portrait">
+    
+    <section id="about">
+        <div class="portrait">
             <img src="./assets/ben.jpg" id="benPhoto">
             <div>
                 <h1>Hi, I'm Ben.</h1>
                 <p>I'm a freelance web developer and designer.</p>
             </div>
-        </section>
-    </div>
+        </div>
+    </section>
 
     <section id="services">
         <div class="profile">
             <h2>
                 Services
             </h2>
-            <p>
-                I offer the following services for small business clients:
-            </p>
         </div>
         <div id="aboutUSPs">
             <div>
-                <h3>
-                    01
-                </h3>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" class="usp-icon" id="usp-icon-web-development"><path d="M278.9 511.5l-61-17.7c-6.4-1.8-10-8.5-8.2-14.9L346.2 8.7c1.8-6.4 8.5-10 14.9-8.2l61 17.7c6.4 1.8 10 8.5 8.2 14.9L293.8 503.3c-1.9 6.4-8.5 10.1-14.9 8.2zm-114-112.2l43.5-46.4c4.6-4.9 4.3-12.7-.8-17.2L117 256l90.6-79.7c5.1-4.5 5.5-12.3.8-17.2l-43.5-46.4c-4.5-4.8-12.1-5.1-17-.5L3.8 247.2c-5.1 4.7-5.1 12.8 0 17.5l144.1 135.1c4.9 4.6 12.5 4.4 17-.5zm327.2.6l144.1-135.1c5.1-4.7 5.1-12.8 0-17.5L492.1 112.1c-4.8-4.5-12.4-4.3-17 .5L431.6 159c-4.6 4.9-4.3 12.7.8 17.2L523 256l-90.6 79.7c-5.1 4.5-5.5 12.3-.8 17.2l43.5 46.4c4.5 4.9 12.1 5.1 17 .6z"/></svg>
                 <h4>
                     Web Development
                 </h4>
+                <p>
+                    Whether you need a simple one-page site, improvements to your current site, or a bespoke business site with all the bells and whistles, I can help.
+                </p>
             </div>
             <div>
-                <h3>
-                    02
-                </h3>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" class="usp-icon" id="usp-icon-ux-design"><path d="M384 320H256c-17.67 0-32 14.33-32 32v128c0 17.67 14.33 32 32 32h128c17.67 0 32-14.33 32-32V352c0-17.67-14.33-32-32-32zM192 32c0-17.67-14.33-32-32-32H32C14.33 0 0 14.33 0 32v128c0 17.67 14.33 32 32 32h95.72l73.16 128.04C211.98 300.98 232.4 288 256 288h.28L192 175.51V128h224V64H192V32zM608 0H480c-17.67 0-32 14.33-32 32v128c0 17.67 14.33 32 32 32h128c17.67 0 32-14.33 32-32V32c0-17.67-14.33-32-32-32z"/></svg>
                 <h4>
                     UX Design
                 </h4>
+                <p>
+                    Solutions scaled to your needs - from simple user-journey optimisations to full scale designs, I can cater to any size of project.
+                </p>
             </div>
             <div>
-                <h3>
-                    03
-                </h3>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="usp-icon" id="usp-icon-wordpress-optimisation"><path d="M61.7 169.4l101.5 278C92.2 413 43.3 340.2 43.3 256c0-30.9 6.6-60.1 18.4-86.6zm337.9 75.9c0-26.3-9.4-44.5-17.5-58.7-10.8-17.5-20.9-32.4-20.9-49.9 0-19.6 14.8-37.8 35.7-37.8.9 0 1.8.1 2.8.2-37.9-34.7-88.3-55.9-143.7-55.9-74.3 0-139.7 38.1-177.8 95.9 5 .2 9.7.3 13.7.3 22.2 0 56.7-2.7 56.7-2.7 11.5-.7 12.8 16.2 1.4 17.5 0 0-11.5 1.3-24.3 2l77.5 230.4L249.8 247l-33.1-90.8c-11.5-.7-22.3-2-22.3-2-11.5-.7-10.1-18.2 1.3-17.5 0 0 35.1 2.7 56 2.7 22.2 0 56.7-2.7 56.7-2.7 11.5-.7 12.8 16.2 1.4 17.5 0 0-11.5 1.3-24.3 2l76.9 228.7 21.2-70.9c9-29.4 16-50.5 16-68.7zm-139.9 29.3l-63.8 185.5c19.1 5.6 39.2 8.7 60.1 8.7 24.8 0 48.5-4.3 70.6-12.1-.6-.9-1.1-1.9-1.5-2.9l-65.4-179.2zm183-120.7c.9 6.8 1.4 14 1.4 21.9 0 21.6-4 45.8-16.2 76.2l-65 187.9C426.2 403 468.7 334.5 468.7 256c0-37-9.4-71.8-26-102.1zM504 256c0 136.8-111.3 248-248 248C119.2 504 8 392.7 8 256 8 119.2 119.2 8 256 8c136.7 0 248 111.2 248 248zm-11.4 0c0-130.5-106.2-236.6-236.6-236.6C125.5 19.4 19.4 125.5 19.4 256S125.6 492.6 256 492.6c130.5 0 236.6-106.1 236.6-236.6z"/></svg>
                 <h4>
                     Wordpress Optimisation
                 </h4>
-            </div>
-            <div>
-                <h3>
-                    04
-                </h3>
-                <h4>
-                    Email Development
-                </h4>
-            </div>
-            <div>
-                <h3>
-                    05
-                </h3>
-                <h4>
-                    PPC
-                </h4>
-            </div>
-            <div>
-                <h3>
-                    06
-                </h3>
-                <h4>
-                    SEO
-                </h4>
+                <p>
+                    Speeding up plugins, removing unnecessary code, and providing you the optimum experience for your self-built site.
+                </p>
             </div>
         </div>
     </section>
@@ -284,7 +262,7 @@
 
     <section class="footer">
         <p>
-            This website is still WiP - if you spot any bugs, please let me know!
+            This website is still a WiP - if you spot any bugs, please let me know!
         </p>
         <div id="social-links">
             <a href="https://www.linkedin.com/in/benjamin-whipp" target="_blank"><svg xmlns="http://www.w3.org/2000/svg"
