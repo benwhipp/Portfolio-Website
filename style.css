@@ -427,10 +427,14 @@ textarea {
     background: #fff;
 }
 
+.hp {
+    display: none;
+}
+
 #name,
 #email,
 #user-project,
-form {
+#website {
     width: 100%;
 }
 

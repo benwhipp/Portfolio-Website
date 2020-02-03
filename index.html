@@ -238,8 +238,11 @@
                 Get in touch and let's make it happen.
             </p>
         </div>
-        <form name="Hire Form" method="POST" data-netlify="true">
+        <form name="Hire Form" method="POST" data-netlify="true" netlify-honeypot="user_website" data-netlify-recaptcha="true">
             <div id="hire-input-fields">
+                <div class="form-text hp">
+                    <input type="text" id="website" name="user_website" maxlength="50" placeholder="Your website">
+                </div>
                 <div class="form-text">
                     <input type="text" id="name" name="user_name" maxlength="50" placeholder="Your name" required>
                 </div>
@@ -253,6 +256,7 @@
                 </div>
             </div>
             <div>
+                <div data-netlify-recaptcha="true"></div>
                 <button class="confetti" type="submit">
                     Hire Me
                 </button>
