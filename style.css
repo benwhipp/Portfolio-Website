@@ -397,7 +397,7 @@ textarea {
     padding: 25px 75px;
     border: 3px solid #fff;
     border-radius: 10px;
-    margin: 10% 0 20% 0;
+    margin: 10% 0 0 0;
     cursor: pointer;
 }
 
@@ -575,7 +575,8 @@ textarea {
     }
 
     #hire-me button {
-        margin: 5% 0;
+        margin: 10% 0 0;
+        width: 100%;
     }
 
     #hire-form {
