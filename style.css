@@ -575,7 +575,7 @@ textarea {
     }
 
     #hire-me button {
-        margin: 10% 0 0;
+        margin: 20px 0 0;
         width: 100%;
     }
 
@@ -590,6 +590,7 @@ textarea {
 
     .form-right {
         padding: 0;
+        margin: 10px 0 0 0;
     }
 
     .footer p,
