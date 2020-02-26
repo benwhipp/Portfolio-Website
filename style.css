@@ -178,18 +178,19 @@ textarea {
 }
 
 #about {
-    padding-top: 40px;
+    padding: 10vw 15%;
+    background: url('./assets/cutout.png') no-repeat 15% 100% / 30vw, url('./assets/circle-triangle3.png') 8% 50% / 72vh no-repeat fixed;
 }
 
 .portrait {
     display: flex;
     flex-wrap: wrap;
     align-items: flex-end;
+    padding-left: 50%;
 }
 
 .portrait img {
     max-width: 200px;
-    border-radius: 100px;
     margin: 0 50px 0 0;
 }
 
@@ -548,14 +549,24 @@ textarea {
 
     .portrait {
         justify-content: center;
+        padding-left: 60%;
     }
 
     .portrait img {
         margin: 0 0 50px;
     }
 
+    #about {
+        padding: 15vw 5vw;
+        background: url('./assets/cutout.png') no-repeat 15% 100% / 40vw, url('./assets/circle-triangle3.png') 8% 100% / 50vw no-repeat fixed;
+    }
+
     #about h1 {
         font-size: 2.5rem;
+    }
+
+    #about p {
+        font-size: 16px;
     }
 
     #aboutUSPs {
@@ -614,7 +625,26 @@ textarea {
 
 }
 
+@media (max-width: 700px) {
+
+    .portrait {
+        padding-left: 0;
+    }
+
+    #about {
+        height: 75vw;
+        padding: 5% 8% 10%;
+        background: url('./assets/hero-mobile.png') no-repeat 50% 100% / 60vw;
+    }
+
+}
+
 @media (max-width: 480px) {
+
+    #about {
+        height: 70vh;
+        background-size: 90vw;
+    }
 
     .project-cards {
         grid-template-columns: auto;
