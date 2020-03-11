@@ -275,7 +275,7 @@ textarea {
 }
 
 .project-cards {
-    display: flex;
+    display: none;
     flex-wrap: wrap;
     justify-content: space-between;
     display: none;
@@ -652,7 +652,7 @@ textarea {
     }
 
     .project-cards {
-        display: grid;
+        display: none;
         grid-template-columns: 100%;
         justify-content: center;
     }
