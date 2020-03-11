@@ -278,6 +278,7 @@ textarea {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    display: none;
 }
 
 .company-name {
